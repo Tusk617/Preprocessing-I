@@ -182,25 +182,39 @@ header nav a {
   text-shadow: 2px 2px 2px #888;
   font-size: 2em;
   width: 35%;
+  text-align: center;
 }
-/*About section*/
-.about-section {
+/*middle section*/
+.middle-section {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  text-shadow: 2px 2px 2px #888;
 }
-.about-me p {
-  background-color: #9AD1D4;
-  width: 30%;
-  font-size: 1.5em;
+.about-me {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 .about-me h2 {
   background-color: #C2F9BB;
-  font-size: 2em;
-  width: 30%;
+  font-size: 3em;
+  text-align: center;
 }
-.skills h2 {
-  background-color: #C2F9BB;
+.about-me p {
+  text-align: center;
   font-size: 2em;
+  background-color: #9AD1D4;
+}
+.my-skills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.my-skills h2 {
+  background-color: #C2F9BB;
+  font-size: 3em;
+  text-align: center;
+}
+.my-skills p {
+  text-align: center;
+  font-size: 2em;
+  background-color: #9AD1D4;
 }

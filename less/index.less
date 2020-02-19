@@ -126,37 +126,48 @@ header {
 		.text-shadow();
 		font-size: 2em;
 		width: 35%;
+		text-align: center;
 	}//p closes here
 }//title-img closes here
 
-/*About section*/
+/*middle section*/
 
-.about-section {
+.middle-section {
 	display: flex;
-	width: 100%;
-	justify-content: center;
-	.text-shadow();
-}//about section ends here
+}
 
 .about-me {
-	
-	 p {
-		 background-color: @content-background;
-		width: 30%;
-		font-size: 1.5em;
-	}//p closes here
-
+	width: 50%;
+	display: flex;
+	flex-direction: column;
 	h2 {
 		background-color: @heading-background;
+		font-size: 3em;
+		text-align: center;
+	}//h2 ends here
+
+	p {
+		text-align: center;
 		font-size: 2em;
-		width: 30%;
-	}//h2 closes here
+		background-color: @content-background;
+	}//p ends here
 }//.about-me ends here
 
-.skills {
+.my-skills {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+
 	h2 {
 		background-color: @heading-background;
+		font-size: 3em;
+		text-align: center;
+	}//h2 closes here
+
+	p {
+		text-align: center;
 		font-size: 2em;
+		background-color: @content-background;
 	}
-}
+}//my-skills closes here
 
