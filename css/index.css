@@ -148,7 +148,6 @@ body {
 /*Header section styling*/
 header {
   display: flex;
-  justify-content: space-between;
   background-color: #C2F9BB;
   font-family: 'Roboto Mono', monospace;
   text-shadow: 2px 2px 2px #888;
@@ -170,6 +169,23 @@ header nav a {
   text-decoration: none;
   color: #20063B;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    display: flex;
+  }
+  header h1 {
+    width: 100%;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+  }
+  header nav a {
+    justify-content: space-between;
+  }
+}
+/*Here goes the image and intro*/
 .title-img {
   display: flex;
   justify-content: space-evenly;
@@ -185,9 +201,21 @@ header nav a {
   width: 35%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .title-img img {
+    width: 65%;
+  }
+}
 /*middle section*/
 .middle-section {
   display: flex;
+}
+@media (max-width: 500px) {
+  .middle-section {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .about-me {
   width: 50%;
@@ -203,6 +231,11 @@ header nav a {
   text-align: center;
   font-size: 1.9em;
   background-color: #9AD1D4;
+}
+@media (max-width: 500px) {
+  .about-me {
+    width: 100%;
+  }
 }
 .my-skills {
   width: 50%;
@@ -220,6 +253,11 @@ header nav a {
   font-size: 2em;
   background-color: #9AD1D4;
   margin-top: 9%;
+}
+@media (max-width: 500px) {
+  .my-skills {
+    width: 100%;
+  }
 }
 /*Work History*/
 .work-history {
