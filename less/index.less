@@ -96,10 +96,11 @@ header {
 	h1 {
 		text-align: center;
 		font-size: 5em;
+		width: 50%;
 	}//header h1 closes here
 
 	nav {
-		width: 55%;
+		width: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -124,7 +125,7 @@ header {
 
 	P {
 		.text-shadow();
-		font-size: 2em;
+		font-size: 1.8em;
 		width: 35%;
 		text-align: center;
 	}//p closes here
@@ -148,7 +149,7 @@ header {
 
 	p {
 		text-align: center;
-		font-size: 2em;
+		font-size: 1.9em;
 		background-color: @content-background;
 	}//p ends here
 }//.about-me ends here
@@ -157,6 +158,7 @@ header {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	background-color: #C2F9BB;
 
 	h2 {
 		background-color: @heading-background;
@@ -168,6 +170,42 @@ header {
 		text-align: center;
 		font-size: 2em;
 		background-color: @content-background;
-	}
+		margin-top: 9%;
+	}//p closes here
 }//my-skills closes here
+
+/*Work History*/
+
+.work-history {
+	display: flex;
+	justify-content: space-between;
+	background-color: @content-background;
+
+	h2 {
+		display: flex;
+		align-items: center;
+		font-size: 2em;
+		background-color: @heading-background;
+	}//h2 ends here
+
+	.places-worked {
+		width: 70%;
+		display: flex;
+		font-size: 1.5em;
+	}
+
+	img {
+		width: 100%;
+		height: 85%;
+	}
+}//work history ends here
+
+/*Footer*/
+
+footer {
+	display: flex;
+	width: 100%;
+
+	
+}//footer ends here
 
