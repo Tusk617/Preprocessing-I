@@ -205,7 +205,27 @@ header {
 footer {
 	display: flex;
 	width: 100%;
+	background-color: @content-background;
 
-	
+	.contact {
+		width: 100%;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 1.5em;
+		padding: 3% 0;
+		background-color: @heading-background;
+		border: 3px inset @content-background;
+	}//h2 closes here
+
+	h3 {
+		text-align: center;
+		font-size: 1.5em;
+	}//h3 ends here
+
+	p {
+		text-align: center;
+	}
 }//footer ends here
 
