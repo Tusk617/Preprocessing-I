@@ -4,6 +4,10 @@
    License: none (public domain)
 */
 
+//imports
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,7 +23,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border: 1px solid lightgreen;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -31,6 +35,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	max-width: 970px;
+	margin: 0 auto;
 }
 ol, ul {
 	list-style: none;
@@ -54,6 +60,216 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+/*Mixins*/
+
+.round-img() {
+	border-radius: 50%;
+}//round-img closes here
+
+.background-color() {
+	background: #9AD1D4;
+}//background-color closes here
+
+.text-shadow() {
+	text-shadow: 2px 2px 2px #888;
+}
+
+/*variables*/
+
+@main-font: 'Roboto Mono', monospace;
+
+@heading-background: #C2F9BB;
+@content-background: #9AD1D4;
+
+/*Header section styling*/
+
+header {
+	display: flex;
+	background-color: @heading-background;
+	font-family: @main-font;
+	.text-shadow();
+
+
+	h1 {
+		text-align: center;
+		font-size: 5em;
+		width: 50%;
+	}//header h1 closes here
+
+	nav {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: @content-background;
+	}//nav closes here
+
+	nav a {
+		font-size: 1.5em;
+		text-decoration: none;
+		color: #20063B;
+	}//nav a closes here
+
+	@media(max-width: 500px){
+		flex-direction: column;
+		display: flex;
+		
+		h1 {
+			width: 100%;
+		}
+
+		nav {
+			display: flex;
+			width: 100%;
+		}
+
+		nav a {
+			justify-content: space-between;
+		}
+	}//@media closes here
+}//header closes here
+
+/*Here goes the image and intro*/
+.title-img {
+	display: flex;
+	justify-content: space-evenly;
+	.background-color();
+	img {
+		width: 25%;
+	.round-img();
+	}//img closes here
+
+	P {
+		.text-shadow();
+		font-size: 1.8em;
+		width: 35%;
+		text-align: center;
+	}//p closes here
+
+	@media (max-width: 500px){
+		
+		img {
+			width: 65%;
+		}
+	}//media closes here
+}//title-img closes here
+
+/*middle section*/
+
+.middle-section {
+	display: flex;
+
+	@media(max-width: 500px){
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
+.about-me {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	h2 {
+		background-color: @heading-background;
+		font-size: 3em;
+		text-align: center;
+	}//h2 ends here
+
+	p {
+		text-align: center;
+		font-size: 1.9em;
+		background-color: @content-background;
+	}//p ends here
+
+	@media(max-width: 500px){
+		width: 100%;
+	}
+	
+}//.about-me ends here
+
+.my-skills {
+	
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	background-color: #C2F9BB;
+
+	h2 {
+		background-color: @heading-background;
+		font-size: 3em;
+		text-align: center;
+	}//h2 closes here
+
+	p {
+		text-align: center;
+		font-size: 2em;
+		background-color: @content-background;
+		margin-top: 9%;
+	}//p closes here
+
+	@media(max-width: 500px){
+		width: 100%;
+	}
+
+}//my-skills closes here
+
+
+/*Work History*/
+
+.work-history {
+	display: flex;
+	justify-content: space-between;
+	background-color: @content-background;
+
+	h2 {
+		display: flex;
+		align-items: center;
+		font-size: 2em;
+		background-color: @heading-background;
+	}//h2 ends here
+
+	.places-worked {
+		width: 70%;
+		display: flex;
+		font-size: 1.5em;
+	}
+
+	img {
+		width: 100%;
+		height: 85%;
+	}
+}//work history ends here
+
+/*Footer*/
+
+footer {
+	display: flex;
+	width: 100%;
+	background-color: @content-background;
+
+	.contact {
+		width: 100%;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 1.5em;
+		padding: 3% 0;
+		background-color: @heading-background;
+		border: 3px inset @content-background;
+	}//h2 closes here
+
+	h3 {
+		text-align: center;
+		font-size: 1.5em;
+	}//h3 ends here
+
+	p {
+		text-align: center;
+	}
+}//footer ends here
 
